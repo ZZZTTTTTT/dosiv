@@ -1,0 +1,98 @@
+[
+  {
+    "deviceCount": "0",
+    "DOMAIN_ID": "12018957824838",
+    "DOMAINS": "/0/515445641576227/515445641576264/12018957824838/",
+    "DOMAIN_LEVEL": "factory",
+    "DATE": "2022-11",
+    "domainName": "制造部"
+  },
+  {
+    "deviceCount": "0",
+    "DOMAIN_ID": "254057388086265",
+    "DOMAINS": "/0/515445641576227/515445641576264/254057388086265/",
+    "DOMAIN_LEVEL": "factory",
+    "DATE": "2022-11",
+    "domainName": "宝田新型建材"
+  },
+  {
+    "deviceCount": "22187",
+    "DOMAIN_ID": "55065950380087",
+    "DOMAINS": "/0/515445641576227/515445641576264/55065950380087/",
+    "DOMAIN_LEVEL": "factory",
+    "DATE": "2022-11",
+    "domainName": "炼铁厂"
+  },
+  {
+    "deviceCount": "12755",
+    "DOMAIN_ID": "560527541336083",
+    "DOMAINS": "/0/515445641576227/515445641576264/560527541336083/",
+    "DOMAIN_LEVEL": "factory",
+    "DATE": "2022-11",
+    "domainName": "炼钢厂"
+  },
+  {
+    "deviceCount": "6766",
+    "DOMAIN_ID": "515445641576272",
+    "DOMAINS": "/0/515445641576227/515445641576264/515445641576272/",
+    "DOMAIN_LEVEL": "factory",
+    "DATE": "2022-11",
+    "domainName": "热轧厂"
+  },
+  {
+    "deviceCount": "3504",
+    "DOMAIN_ID": "240958284261879",
+    "DOMAINS": "/0/515445641576227/515445641576264/240958284261879/",
+    "DOMAIN_LEVEL": "factory",
+    "DATE": "2022-11",
+    "domainName": "厚板部"
+  },
+  {
+    "deviceCount": "12194",
+    "DOMAIN_ID": "55065950380088",
+    "DOMAINS": "/0/515445641576227/515445641576264/55065950380088/",
+    "DOMAIN_LEVEL": "factory",
+    "DATE": "2022-11",
+    "domainName": "冷轧厂"
+  },
+  {
+    "deviceCount": "8871",
+    "DOMAIN_ID": "378831193229334",
+    "DOMAINS": "/0/515445641576227/515445641576264/378831193229334/",
+    "DOMAIN_LEVEL": "factory",
+    "DATE": "2022-11",
+    "domainName": "硅钢部"
+  },
+  {
+    "deviceCount": "6766",
+    "DOMAIN_ID": "515445641576272",
+    "DOMAINS": "/0/515445641576227/515445641576264/515445641576272/",
+    "DOMAIN_LEVEL": "factory",
+    "DATE": "2022-11",
+    "domainName": "热轧厂"
+  },
+  {
+    "deviceCount": "3504",
+    "DOMAIN_ID": "240958284261879",
+    "DOMAINS": "/0/515445641576227/515445641576264/240958284261879/",
+    "DOMAIN_LEVEL": "factory",
+    "DATE": "2022-11",
+    "domainName": "厚板部"
+  },
+  {
+    "deviceCount": "12194",
+    "DOMAIN_ID": "55065950380088",
+    "DOMAINS": "/0/515445641576227/515445641576264/55065950380088/",
+    "DOMAIN_LEVEL": "factory",
+    "DATE": "2022-11",
+    "domainName": "冷轧厂"
+  },
+  {
+    "deviceCount": "8871",
+    "DOMAIN_ID": "378831193229334",
+    "DOMAINS": "/0/515445641576227/515445641576264/378831193229334/",
+    "DOMAIN_LEVEL": "factory",
+    "DATE": "2022-11",
+    "domainName": "硅钢部"
+  }
+]

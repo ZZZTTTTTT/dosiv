@@ -1,0 +1,11 @@
+.de-device-indent {
+  text-indent: 1.5em;
+}
+.de-group {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.de-group-wrap {
+  flex: 1;
+}

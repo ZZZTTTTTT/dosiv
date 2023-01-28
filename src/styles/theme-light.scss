@@ -1,0 +1,113 @@
+@import './mixin.scss';
+.theme-light {
+  // ====================变量========================
+  $borderColor: rgba(0,0,0,.3);
+  $commonColor: #3088f4;
+  $bgc: rgba(
+    $color: #1d2835,
+    $alpha: 0.95,
+  );
+  $bgcModal: #fff;
+  // $textColor:#c0c4cc;
+  $lightTextColor: #89aea9;
+  // $disabledColor:#4f5c68;
+
+  $textColor: #000;
+  $menuBgColor: #2359af;
+  $navBgColor: linear-gradient(90deg, #2359af 0%, #2d79e9 40%);
+  $bgColor: #f7faff;
+  $disabledColor: #6a757f;
+  $hoverColor1: rgba(0,0,0,.1);
+  $hoverColor: #3088f4;
+  // ====================样式=========================
+  @include theme($textColor, $menuBgColor, $navBgColor, $bgColor, $disabledColor, $borderColor);
+  @include elementStyle($textColor, $commonColor, $bgcModal, $disabledColor, $borderColor,$hoverColor1);
+
+  .light-style,
+  .num-theme,
+  .iconclass,
+  .el-button span,
+  .el-radio__input.is-checked + .el-radio__label,
+  .el-breadcrumb__item:last-child .el-breadcrumb__inner,
+  .statisticsData,
+  .info-title,
+  .textclass,
+  .check,
+  .el-pager li.active,
+  .el-pager li.active:hover {
+    color: $hoverColor;
+  }
+  .accordion-button {
+    background-color: #f7faff;
+    color: #000;
+  }
+  .dataBoard,
+  .accordion-button {
+    background: rgb(209, 229, 252);
+  }
+  .button-background {
+    background: rgb(184, 215, 250);
+  }
+
+  .block,
+  .el-tabs__active-bar {
+    background: $hoverColor;
+  }
+  .el-input__inner:focus {
+    border: 1px solid $hoverColor !important;
+  }
+ 
+  .active-ring-name,
+  .dv-digital-flop {
+    color: #000 !important;
+  }
+  .el-popper.el-cascader__dropdown,
+  .el-dialog {
+    background: $bgColor;
+  }
+  .el-cascader-node__label,
+  .ticketDialog,
+  .dv-scroll-board {
+    color: $textColor;
+  }
+
+  .expand-icon{
+    background: url('../assets/收起1.png') center/100% 100% no-repeat;
+    &:hover {
+    background: url('../assets/icon_open.png') center/100% 100% no-repeat;
+  }
+  &.fold {
+    background: url('../assets/展开1.png') center/100% 100% no-repeat;
+    &:hover {
+      background: url('../assets/icon_close.png') center/100% 100% no-repeat;
+    }
+  }
+}
+}
+.theme-light-app{
+  
+  // ===============dialog==============
+  &~.el-dialog__wrapper{
+     // ====================变量========================
+     $borderColor: rgba(0,0,0,.3);
+     $commonColor: #3088f4;
+     $bgc: rgba(
+       $color: #1d2835,
+       $alpha: 0.95,
+     );
+     $bgcModal: #fff;
+     // $textColor:#c0c4cc;
+     $lightTextColor: #89aea9;
+     // $disabledColor:#4f5c68;
+   
+     $textColor: #000;
+     $menuBgColor: #2359af;
+     $navBgColor: linear-gradient(90deg, #2359af 0%, #2d79e9 40%);
+     $bgColor: #f7faff;
+     $disabledColor: #6a757f;
+     $hoverColor1: rgba(0,0,0,.1);
+     $hoverColor: #3088f4;
+      // ====================样式=========================
+      @include elementStyle($textColor, $commonColor, $bgcModal, $disabledColor, $borderColor,$hoverColor1);
+  }
+}

@@ -1,0 +1,491 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: #d3dce6;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #99a9bf;
+    border-radius: 20px;
+  }
+}
+
+@mixin relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin pct($pct) {
+  width: #{$pct};
+  position: relative;
+  margin: 0 auto;
+}
+
+@mixin triangle($width, $height, $color, $direction) {
+  $width: $width/2;
+  $color-border-style: $height solid $color;
+  $transparent-border-style: $width solid transparent;
+  height: 0;
+  width: 0;
+
+  @if $direction==up {
+    border-bottom: $color-border-style;
+    border-left: $transparent-border-style;
+    border-right: $transparent-border-style;
+  }
+
+  @else if $direction==right {
+    border-left: $color-border-style;
+    border-top: $transparent-border-style;
+    border-bottom: $transparent-border-style;
+  }
+
+  @else if $direction==down {
+    border-top: $color-border-style;
+    border-left: $transparent-border-style;
+    border-right: $transparent-border-style;
+  }
+
+  @else if $direction==left {
+    border-right: $color-border-style;
+    border-top: $transparent-border-style;
+    border-bottom: $transparent-border-style;
+  }
+}
+@mixin theme($textColor, $menuBgColor,$navBgColor, $bgColor,$disabledColor,$borderColor){
+  color: $textColor;
+  background-color:$bgColor;
+  .navbar{
+    color: #fff;
+    background:$navBgColor;
+  }
+  .sidebar-container{
+    .el-menu-item{
+      color: #fff;
+      &.is-active{
+        font-weight: 700;
+      }
+    }
+    .router-link-active{
+      .el-menu-item{
+        color: #fff;
+      }
+    }
+    background:$menuBgColor;
+  }
+  .card{
+    &::before{
+      border-color: $borderColor !important;
+    }
+    &::after{
+      border-color: $borderColor !important;
+    }
+    .card-arrow-item{
+      border-color: $borderColor;
+    }
+  }
+}
+@mixin elementStyle($textColor, $commonColor, $bgcModal, $disabledColor, $borderColor,$hoverColor) {
+  // ==================input=====================
+.el-input{
+  input{
+    background-color: transparent;
+  }
+}
+.el-input__inner {
+  height: 28px;
+}
+.el-input__icon {
+ line-height: 28px;
+}
+.el-form-item__label{
+  color: $textColor;
+}
+.el-textarea{
+  textarea{
+    background-color: transparent;
+  }
+}
+.el-input__inner ,.el-textarea__inner{
+  background: transparent;
+  border-color: $borderColor;
+  color: $textColor;
+}
+.el-input.is-active .el-input__inner,
+.el-input__inner:focus {
+  border-color: $borderColor;
+  outline: 0;
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 18%);
+  background-color: transparent;
+}
+.el-input.is-disabled .el-input__inner{
+  background-color: transparent;
+  border-color: $borderColor;
+  color: $textColor;
+  cursor: not-allowed;
+}
+.el-input__inner:hover, .el-select:hover .el-input__inner, .el-textarea__inner:focus{
+  border-color: $borderColor;
+}
+.el-textarea__inner:focus{
+  border-color: $borderColor;
+  outline: 0;
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 18%);
+  background-color: transparent;
+}
+
+.el-input-number__decrease, .el-input-number__increase{
+  background: $commonColor;
+  border-color: $commonColor;
+  // color: #fff;
+  cursor: pointer;
+}
+.el-input-number__decrease:hover, .el-input-number__increase:hover{
+  // color: #fff;
+}
+.el-input-number__decrease:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled), .el-input-number__increase:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled){
+  border-color: $commonColor;
+}
+// ===================button=====================
+.el-button {
+  background-color: transparent;
+  border-color: $borderColor;
+  padding: 0 15px;
+  height: 28px;
+  span {
+    color: $textColor !important;
+    font-size: 12px;
+  }
+}
+.el-button + .el-button {
+  margin-left: 10px;
+}
+.el-button:focus,
+.el-button:hover {
+  background: $commonColor;
+  border-color: $commonColor;
+  span {
+    color: #fff !important;
+  }
+}
+.el-button:active {
+  color: $commonColor;
+  border-color: $commonColor;
+  outline: 0;
+}
+.el-button::-moz-focus-inner {
+  border: 0;
+}
+.el-button [class*="el-icon-"] + span {
+  margin-left: 5px;
+}
+.el-button.is-plain:focus,
+.el-button.is-plain:hover {
+  background: $commonColor;
+  border-color: $commonColor;
+  color: $textColor;
+}
+.el-button.is-active,
+.el-button.is-plain:active {
+  color: $commonColor;
+  border-color: $commonColor;
+}
+.el-button.is-plain:active {
+  background: transparent;
+  outline: 0;
+}
+.el-button.is-disabled.is-plain,
+.el-button.is-disabled.is-plain:focus,
+.el-button.is-disabled.is-plain:hover {
+  background: transparent;
+  border-color: $disabledColor;
+  span {
+    color: $disabledColor;
+  }
+}
+.el-link.el-link--primary {
+  color: $commonColor;
+  &:hover {
+    color:$commonColor;
+    font-weight: 700;
+  }
+}
+
+.el-button-group .el-button--primary:not(:first-child):not(:last-child) {
+  border-left-color: $commonColor;
+  border-right-color: $commonColor;
+}
+.el-button-group .el-button--primary:first-child {
+  border-right-color: $commonColor;
+}
+.el-button-group .el-button--primary:first-child {
+  border-left-color: $commonColor;
+}
+
+.el-button--primary.is-disabled,
+.el-button--primary.is-disabled:active,
+.el-button--primary.is-disabled:focus,
+.el-button--primary.is-disabled:hover {
+  background-color: $disabledColor;
+  border-color: $commonColor;
+}
+// ==============================table======================
+.el-table{
+  background: transparent;
+}
+.el-table tbody>tr{
+  color: $textColor;
+}
+.el-table th, .el-table tr{
+  background-color: transparent;
+}
+.el-table th>.cell{
+  color: $textColor;
+  font-weight: 700;
+}
+.el-table td, .el-table th.is-leaf{
+  border-color: $borderColor;
+}
+.el-table--enable-row-hover .el-table__body tr:hover>td{
+  background-color: transparent;
+}
+.el-table--border::after, .el-table--group::after, .el-table::before{
+  background-color: $borderColor;
+}
+.el-table--border{
+  border-color: $borderColor;
+}
+.el-table, .el-table__expanded-cell{
+    background-color:unset;
+}
+.el-table{
+  color: $textColor;
+  input{
+    font-size: 12px;
+    box-shadow: 0 0 0 1px rgb(255 255 255 / 18%);
+    color: $textColor;
+    background-color: transparent;
+    box-shadow: unset;
+    padding: 4px 0;
+    cursor: text;
+    margin: 0;
+    border: none;
+    border: 1px solid $borderColor;
+  }
+  input:focus-visible {
+    outline: none;
+  }
+}
+  table tr:hover > td {
+    background-color: rgba(216, 216, 216, 0.08) !important;
+  }
+  table tr.highlight-row td {
+    background-color: rgba(216, 216, 216, 0.08);
+  }
+
+  // ========================checkbox========================
+  .el-checkbox{
+    color: $textColor;
+  }
+  .el-checkbox__inner {
+    background: transparent;
+    border-color: #4f5c68;
+  }
+  .el-checkbox__label{
+    font-size: 12px;
+  }
+  .el-checkbox__input.is-checked + .el-checkbox__label {
+    color: $commonColor;
+  }
+  .el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+    background: $commonColor;
+    border: none;
+  }
+  .el-checkbox__inner:hover{
+    border-color: $commonColor;
+  }
+  .el-checkbox__input.is-focus .el-checkbox__inner {
+    border-color: $commonColor;
+    box-shadow: 0 0 0 0.25rem rgb(255 255 255 / 25%);
+  }
+  .el-checkbox__input.is-disabled .el-checkbox__inner {
+      background-color: $disabledColor;
+      border-color: transparent;
+  }
+  // ========================radio==============
+  .el-radio__inner::after {
+    background-color: $commonColor;
+  }
+  .el-radio__input.is-checked .el-radio__inner,
+  .el-button:hover {
+    border-color: transparent;
+    background: $commonColor;
+    color:  $commonColor;
+  }
+  .el-radio__inner {
+    background: transparent;
+  }
+  // ========================dialog====================
+  .el-dialog{
+    background-color: $bgcModal;
+    .el-dialog__title{
+      color: $textColor;
+    }
+  }
+  // =================pagination==============
+  .el-pagination.is-background .el-pager li:not(.disabled).active{
+    background-color: $commonColor;
+  }
+  .el-pagination.is-background .el-pager li:not(.disabled):not(.active):hover{
+    color: $commonColor;
+  }
+  // ========================select==================
+  .el-select-dropdown {
+    background: $bgcModal;
+    border-color: transparent;
+    // box-shadow: 0 0 5px $bgcModal;
+    .el-select-dropdown__item {
+      // background-color: transparent;
+      color: $textColor;
+    }
+    .el-select-dropdown__item.selected{
+      color: $commonColor;
+      background-color: $hoverColor ;
+    }
+    .el-select-dropdown__item.hover, .el-select-dropdown__item:hover{
+      background: $hoverColor;
+      color: $commonColor;
+    }
+    .popper__arrow{
+      display: none;
+    }
+  }
+  
+  // ======================date picker======================
+  .el-picker-panel {
+    background:$bgcModal;
+    border-color: transparent;
+    // box-shadow: 0 0 5px #40505d;
+    border-color: $borderColor;
+    .el-picker-panel__sidebar{
+      background:$bgcModal;
+      border-color: $borderColor;
+    }
+    .el-picker-panel__footer{
+      background:$bgcModal;
+      border-color: $borderColor;
+      button{
+        border: none;
+        color: $commonColor;
+        &.is-disabled{
+          span{
+            color: $disabledColor !important;
+          }
+        }
+        &:hover{
+          background: transparent !important;
+        }
+      }
+    }
+    .el-date-range-picker__content.is-left{
+      border-color: $borderColor;
+    }
+    .el-date-range-picker__time-header{
+      border-color: $borderColor;
+    }
+    .el-date-table th {
+      border-color: transparent;
+    }
+    .el-date-table td.current:not(.disabled) span {
+      background: $commonColor;
+    }
+    .el-date-table td.available:hover {
+      color: $commonColor;
+    }
+    .el-date-table td.today span {
+      color: $commonColor;
+    }
+    .el-picker-panel__icon-btn {
+      color: $textColor;
+    }
+    .el-date-picker__header-label:hover {
+      color: $commonColor;
+    }
+    .popper__arrow {
+      display: none !important;
+    }
+    .el-date-table td.in-range div, .el-date-table td.in-range div:hover, .el-date-table.is-week-mode .el-date-table__row.current div, .el-date-table.is-week-mode .el-date-table__row:hover div{
+      background: transparent;
+    }
+    .el-date-table td.end-date span, .el-date-table td.start-date span{
+      background-color: $commonColor;
+      color: $textColor;
+    }
+    .el-picker-panel__shortcut:hover{
+      color: $commonColor;
+    }
+  }
+  .el-range-editor .el-range-input{
+    background: transparent;
+    color: $textColor;
+  }
+  .el-date-editor .el-range-separator{
+    color: $textColor;
+  }
+  .el-range-editor.is-active, .el-range-editor.is-active:hover{
+    border-color: $borderColor;
+  }
+  .el-date-picker__time-header{
+    border-color: $borderColor;
+  }
+  .el-picker-panel .el-date-table td.current span{
+    color: $textColor;
+  }
+  .el-picker-panel {
+      color:$textColor;
+  }
+  .el-date-table td.available {
+        color: $textColor;
+  }
+  // ====================cascader====================
+.el-cascader__dropdown{
+  background-color: $bgcModal;
+  border-color: transparent;
+  .popper__arrow{
+    display: none;
+  }
+}
+.el-cascader-node:not(.is-disabled):hover, .el-cascader-node:not(.is-disabled):focus{
+  color: $commonColor;
+  background-color: $hoverColor ;
+}
+.el-cascader-menu{
+  border-color: $borderColor
+}
+.el-cascader-node.in-active-path, .el-cascader-node.is-selectable.in-checked-path, .el-cascader-node.is-active{
+  color: $commonColor;
+}
+.el-radio__inner:hover{
+  color: $commonColor;
+  border-color:$commonColor;
+}
+.el-cascader .el-input.is-focus .el-input__inner{
+  border-color: $commonColor;
+}
+// ======================tab==============
+.el-tabs__active-bar{
+  background-color: $commonColor;
+}
+}

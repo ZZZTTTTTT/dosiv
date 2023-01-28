@@ -1,0 +1,17 @@
+.de-tabs {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.de-tabs .de-tab-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
+  overflow: auto;
+  margin: 10px 0;
+}
+.de-tab-content {
+  flex: 1;
+  overflow: hidden;
+}

@@ -1,0 +1,20 @@
+.device-search {
+  height: 34px;
+  padding-left: 5px;
+}
+.de-last-form-item >>> .el-form-item__content {
+  display: flex;
+}
+.de-last-form-item >>> .el-form-item__content .de-form-btns {
+  margin-left: auto;
+}
+.de-form-btns {
+  position: absolute;
+  right: 0;
+  top: 2px;
+}
+.de-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

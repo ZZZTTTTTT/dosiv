@@ -1,0 +1,282 @@
+// $commonColor: #3cd3a6;
+
+// .el-table,
+// table tr,
+// table th {
+//   background: transparent !important;
+// }
+// .el-tree {
+//   background: transparent;
+// }
+
+// .el-breadcrumb__inner,
+// .el-breadcrumb__inner a {
+//   font-weight: 400 !important;
+// }
+
+// .el-dropdown-menu--medium .el-dropdown-menu__item {
+//   line-height: 1.5rem;
+//   padding: 0 0.5rem;
+// }
+// .el-dropdown-menu__item {
+//   color: #d3d6dd;
+// }
+
+// .el-dropdown {
+//   color: #d3d6dd;
+// }
+
+// .el-upload {
+//   input[type='file'] {
+//     display: none !important;
+//   }
+// }
+
+// .el-upload__input {
+//   display: none;
+// }
+
+// // to fixed https://github.com/ElemeFE/element/issues/2461
+// .el-dialog {
+//   transform: none;
+//   left: 0;
+//   position: relative;
+//   margin: 0 auto;
+// }
+
+// // refine element ui upload
+// .upload-container {
+//   .el-upload {
+//     width: 100%;
+
+//     .el-upload-dragger {
+//       width: 100%;
+//       height: 200px;
+//     }
+//   }
+// }
+
+// // dropdown
+// .el-dropdown-menu {
+//   a {
+//     display: block;
+//   }
+
+//   background-color: #07163f;
+//   border: 0.071429rem solid #1d8cfb;
+//   padding: 0.2rem 0;
+// }
+
+// .el-dropdown-menu__item:not(.is-disabled):hover,
+// .el-dropdown-menu__item:focus {
+//   background-color: #07163f;
+// }
+// .el-dropdown-menu--medium .el-dropdown-menu__item {
+//   line-height: 1.5rem;
+//   padding: 0 0.5rem;
+// }
+// .el-dropdown-menu__item {
+//   color: #d3d6dd;
+// }
+
+// .el-dropdown {
+//   color: #d3d6dd;
+// }
+
+// // el-datepicker
+// .el-date-picker {
+//   background: #1d2836;
+//   border-color: transparent;
+//   box-shadow: 0 0 5px #40505d;
+//   .el-date-table th {
+//     border-color: transparent;
+//   }
+//   .el-date-table td.current:not(.disabled) span {
+//     background: $commonColor;
+//   }
+//   .el-date-table td.available:hover {
+//     color: $commonColor;
+//   }
+//   .el-date-table td.today span {
+//     color: $commonColor;
+//   }
+//   .el-picker-panel__icon-btn {
+//     color: #c4c7ca;
+//   }
+//   .el-date-picker__header-label:hover {
+//     color: $commonColor;
+//   }
+//   .popper__arrow {
+//     display: none !important;
+//   }
+// }
+
+// $trans: transparent;
+// $transHover: #032d2618;
+// $F5F7FA: #4f5c68;
+// // el-dialog
+// .el-select .el-input.is-focus .el-input__inner {
+//   border-color: $borderColor;
+// }
+// /*
+// .el-select-dropdown {
+//   background: $bgc;
+//   border-color: transparent;
+//   box-shadow: 0 0 5px #40505d;
+//   .el-select-dropdown__item {
+//     background-color: transparent;
+//     color: $textColor;
+//   }
+//   .el-select-dropdown__item.hover,
+//   .el-select-dropdown__item:hover {
+//     background: transparent;
+//     color: $commonColor;
+//   }
+// }*/
+// .el-popper .popper__arrow {
+//   display: none;
+// }
+// .el-select .el-input__inner:focus {
+//   border-color: $borderColor;
+// }
+
+// .el-select .el-tag {
+//   background-color: transparent;
+//   border: none;
+// }
+// /*
+// .el-select-dropdown__item.selected {
+//   color: $commonColor;
+// }
+// .el-select-dropdown.is-multiple .el-select-dropdown__item {
+//   background-color: transparent;
+// }
+// .el-select-dropdown.is-multiple .el-select-dropdown__item.selected.hover {
+//   background-color: transparent;
+// }
+// .el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+//   color: $commonColor;
+//   background-color: transparent;
+// }*/
+// .el-select .el-tag__close.el-icon-close {
+//   background-color: transparent;
+// }
+// .el-select__tags-text {
+//   color: $textColor;
+// }
+// // loading
+// .el-loading-mask {
+//   background-color: transparent;
+// }
+// .el-loading-spinner .el-loading-text {
+//   color: $commonColor;
+// }
+// .el-loading-spinner .path {
+//   stroke: $commonColor;
+// }
+// .el-loading-spinner i {
+//   color: $commonColor;
+// }
+
+// .el-breadcrumb__item:last-child .el-breadcrumb__inner {
+//   color: $commonColor;
+// }
+// .el-breadcrumb__item:last-child .el-breadcrumb__inner:hover {
+//   color: $commonColor;
+//   cursor: pointer;
+// }
+
+// .el-popper.el-cascader__dropdown {
+//   background: $bgc;
+// }
+
+// .el-cascader-node__label {
+//   color: #fff;
+// }
+
+// .el-cascader-node:not(.is-disabled):hover {
+//   background-color: transparent;
+//   .el-radio__inner {
+//     border: 1px solid $commonColor;
+//     border-radius: 100%;
+//   }
+//   .el-icon-arrow-right:before {
+//     color: $commonColor;
+//   }
+// }
+
+// .el-cascader .el-input.is-focus .el-input__inner {
+//   border-color: $commonColor;
+// }
+
+// .el-pagination button:disabled {
+//   background-color: $trans;
+// }
+
+// .el-pager li {
+//   background: $trans;
+// }
+
+// .el-pager li.active,
+// .el-pager li.active:hover {
+//   color: #fff;
+// }
+
+// .el-tabs__nav-wrap::after,
+// .el-table::before {
+//   background-color: #fff;
+//   opacity: 0.3;
+//   height: 1px;
+// }
+// .el-pagination__sizes .el-input .el-input__inner:hover,
+// .el-pagination__sizes .el-input .el-input__inner,
+// .el-input--medium .el-input__inner {
+//   border-color: rgba(255, 255, 255, 0.3);
+// }
+// .el-icon-arrow-left:before,
+// .el-icon-arrow-right:before {
+//   color: rgba(255, 255, 255, 0.3);
+// }
+
+// .el-pagination__sizes .el-input .el-input__inner:hover,
+// .el-pagination__sizes .el-input .el-input__inner,
+// .el-pagination__editor.el-input .el-input__inner,
+// .el-pager li,
+// .el-pager li:hover {
+//   color: #928d8d;
+// }
+
+// .el-pagination .btn-prev,
+// .el-pagination .btn-next {
+//   background-color: transparent;
+// }
+
+// .el-table--enable-row-hover .el-table__body tr:hover > td {
+//   background-color: transparent;
+//   cursor: pointer;
+// }
+// .el-button {
+//   padding: 4px !important;
+// }
+
+// .el-tab-pane {
+//   overflow-y: auto;
+//   height: calc(100vh - 25rem);
+// }
+// .el-collapse-item__header,
+// .el-collapse-item__wrap {
+//   background: transparent;
+//   border: none !important;
+// }
+// .el-collapse-item__content {
+//   height: calc(100vh - 230px);
+// }
+// .el-collapse-item__wrap {
+//   overflow: scroll;
+// }
+// .el-collapse {
+//   border: none;
+// }
+.el-dropdown {
+  color: unset;
+}

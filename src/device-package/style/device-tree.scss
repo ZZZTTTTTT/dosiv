@@ -1,0 +1,10 @@
+.de-tree {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.de-tree-item-wrapper {
+  margin: 10px 0;
+  flex: 1;
+  overflow: auto;
+}
